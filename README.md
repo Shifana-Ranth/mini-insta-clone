@@ -118,6 +118,64 @@ Each service:
 
 ---
 
+## 🧩 Real-World System Design Challenges
+
+### 1. Feed Scaling (Celebrity Problem)
+
+**Problem:**
+Fan-out on write works well for normal users but breaks down for users with millions of followers (celebrity accounts), causing massive write amplification.
+
+**Solution:**
+A hybrid feed generation strategy was used:
+
+* **Normal users:** Fan-out on write (precompute feeds and push to cache)
+* **Celebrity users:** Fan-out on read (compute feed dynamically during request)
+
+**Implementation:**
+
+* Precomputed feeds cached in Redis for regular users
+* Dynamic feed merging at request time for high-follower users
+* Reduced unnecessary writes and improved scalability
+
+---
+
+### 2. Like System at Scale
+
+**Problem:**
+Handling high write throughput during viral events (e.g., thousands of likes per second on a single post).
+
+**Solution:**
+
+* Asynchronous processing using Kafka
+* Eventual consistency model
+* Cache-first read optimization
+
+**Implementation:**
+
+* Like events are published to Kafka topics
+* Multiple consumers process events independently
+* Post Service updates like counts asynchronously
+* Redis used for fast retrieval of like counts
+
+---
+
+### 3. Notification Overload
+
+**Problem:**
+Sending a notification for every event leads to poor user experience and notification fatigue.
+
+**Solution:**
+
+* Filtering and prioritization logic applied before sending notifications
+* Avoid unnecessary or low-value notifications
+
+**Future Improvements:**
+
+* ML-based notification ranking system
+* Personalized notification delivery based on user behavior
+
+---
+
 ## 🔥 Key Design Decisions
 
 ### 1. Event-Driven Architecture (Kafka Everywhere)
