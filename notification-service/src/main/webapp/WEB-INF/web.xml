@@ -1,0 +1,36 @@
+<web-app>
+
+<servlet>
+    <servlet-name>notify</servlet-name>
+    <servlet-class>
+        com.miniinstagram.notification.servlet.NotificationServlet
+    </servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>notify</servlet-name>
+    <url-pattern>/notify</url-pattern>
+</servlet-mapping>
+<servlet>
+    <servlet-name>testNotify</servlet-name>
+    <servlet-class>
+        com.miniinstagram.notification.servlet.TestNotificationServlet
+    </servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>testNotify</servlet-name>
+    <url-pattern>/testNotify</url-pattern>
+</servlet-mapping>
+<servlet>
+    <servlet-name>getNotifications</servlet-name>
+    <servlet-class>
+        com.miniinstagram.notification.servlet.GetNotificationsServlet
+    </servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>getNotifications</servlet-name>
+    <url-pattern>/notifications</url-pattern>
+</servlet-mapping>
+</web-app>

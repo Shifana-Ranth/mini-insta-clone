@@ -1,0 +1,31 @@
+<web-app>
+
+    <servlet>
+        <servlet-name>SearchUserServlet</servlet-name>
+        <servlet-class>com.miniinstagram.search.servlet.SearchUserServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SearchUserServlet</servlet-name>
+        <url-pattern>/searchUsers</url-pattern>
+    </servlet-mapping>
+	<servlet>
+	    <servlet-name>IndexUserServlet</servlet-name>
+	    <servlet-class>com.miniinstagram.search.servlet.IndexUserServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	    <servlet-name>IndexUserServlet</servlet-name>
+	    <url-pattern>/indexUser</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>ReindexUsersServlet</servlet-name>
+	    <servlet-class>com.miniinstagram.search.servlet.ReindexUsersServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	    <servlet-name>ReindexUsersServlet</servlet-name>
+	    <url-pattern>/reindex-users</url-pattern>
+	</servlet-mapping>
+</web-app>

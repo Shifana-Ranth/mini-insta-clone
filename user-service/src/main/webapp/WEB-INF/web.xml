@@ -1,0 +1,178 @@
+<web-app>
+
+<servlet>
+<servlet-name>login</servlet-name>
+<servlet-class>com.miniinstagram.user.servlet.LoginServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>login</servlet-name>
+<url-pattern>/login</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+<servlet-name>register</servlet-name>
+<servlet-class>com.miniinstagram.user.servlet.RegisterServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>register</servlet-name>
+<url-pattern>/register</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+<servlet-name>setupProfile</servlet-name>
+<servlet-class>com.miniinstagram.user.servlet.SetupProfileServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>setupProfile</servlet-name>
+<url-pattern>/setupProfile</url-pattern>
+</servlet-mapping>
+ i thi
+
+<servlet>
+<servlet-name>profile</servlet-name>
+<servlet-class>com.miniinstagram.user.servlet.ProfileServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>profile</servlet-name>
+<url-pattern>/profile</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>notificationPage</servlet-name>
+    <servlet-class>
+        com.miniinstagram.user.servlet.NotificationPageServlet
+    </servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>notificationPage</servlet-name>
+    <url-pattern>/notifications</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>logout</servlet-name>
+<servlet-class>com.miniinstagram.user.servlet.LogoutServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>logout</servlet-name>
+<url-pattern>/logout</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>HomeServlet</servlet-name>
+    <servlet-class>com.miniinstagram.user.servlet.HomeServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>HomeServlet</servlet-name>
+    <url-pattern>/home</url-pattern>
+</servlet-mapping>
+<servlet>
+    <servlet-name>UserPostsPageServlet</servlet-name>
+    <servlet-class>com.miniinstagram.user.servlet.UserPostsPageServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>UserPostsPageServlet</servlet-name>
+    <url-pattern>/userPostsPage</url-pattern>
+</servlet-mapping>
+<servlet>
+    <servlet-name>UserPostsDataServlet</servlet-name>
+    <servlet-class>com.miniinstagram.user.servlet.UserPostsDataServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>UserPostsDataServlet</servlet-name>
+    <url-pattern>/userPostsData</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>AddPostProxyServlet</servlet-name>
+    <servlet-class>com.miniinstagram.user.servlet.AddPostProxyServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>AddPostProxyServlet</servlet-name>
+    <url-pattern>/addPost</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>DeletePostProxyServlet</servlet-name>
+    <servlet-class>com.miniinstagram.user.servlet.DeletePostProxyServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>DeletePostProxyServlet</servlet-name>
+    <url-pattern>/deletePost</url-pattern>
+</servlet-mapping>
+<servlet>
+    <servlet-name>UserFollowServlet</servlet-name>
+    <servlet-class>com.miniinstagram.user.servlet.UserFollowServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>UserFollowServlet</servlet-name>
+    <url-pattern>/user-follow</url-pattern>
+</servlet-mapping>
+<servlet>
+    <servlet-name>HomeFeedServlet</servlet-name>
+    <servlet-class>com.miniinstagram.user.servlet.HomeFeedServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>HomeFeedServlet</servlet-name>
+    <url-pattern>/homeFeed</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>LikeProxyServlet</servlet-name>
+    <servlet-class>com.miniinstagram.user.servlet.LikeProxyServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>LikeProxyServlet</servlet-name>
+    <url-pattern>/like</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>GetUserByIdServlet</servlet-name>
+    <servlet-class>com.miniinstagram.user.servlet.GetUserByIdServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>GetUserByIdServlet</servlet-name>
+    <url-pattern>/getUserById</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>GetFolloweesServlet</servlet-name>
+    <servlet-class>com.miniinstagram.user.servlet.GetFolloweesServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>GetFolloweesServlet</servlet-name>
+    <url-pattern>/getFollowees</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>ViewUserServlet</servlet-name>
+    <servlet-class>com.miniinstagram.user.servlet.ViewUserServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>ViewUserServlet</servlet-name>
+    <url-pattern>/viewUser</url-pattern>
+</servlet-mapping>
+
+<servlet>
+        <servlet-name>SearchUsersServlet</servlet-name>
+        <servlet-class>com.miniinstagram.user.servlet.SearchUsersServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchUsersServlet</servlet-name>
+        <url-pattern>/searchUsers</url-pattern>
+    </servlet-mapping>
+</web-app>
