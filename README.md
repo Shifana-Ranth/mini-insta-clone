@@ -125,8 +125,8 @@ Each service:
 **Problem:**
 Fan-out on write works well for normal users but breaks down for users with millions of followers (celebrity accounts), causing massive write amplification.
 
-**Solution:**
-A hybrid feed generation strategy was used:
+**Future Improvements:**
+A hybrid feed generation strategy can be used:
 
 * **Normal users:** Fan-out on write (precompute feeds and push to cache)
 * **Celebrity users:** Fan-out on read (compute feed dynamically during request)
